@@ -17,7 +17,7 @@ class TestJunitLab {
 	private static int nrTwo;
 	
 	// Denotes that the (annotated) method should be executed before all @Test etc
-	// Annotations start with ‘@’.
+	// Annotations start with @.
 	@BeforeAll
     	static void initAll() {
 		value = new JunitLab();
@@ -99,13 +99,13 @@ class TestJunitLab {
 	@Test
 	void arrayNotEmptyTest() { 
 		System.out.println(" Run arrayNotEmptyTest check array not empty test");
-		assertNotNull(value.getStrValue());
+		assertNotNull(value.getStrArrayValue());
 	}
 	
 	@Test
 	void arrayEqualTest() { 
 		System.out.println(" Run arrayEqualTest check arrays equal");
-		 assertArrayEquals(value.getStrValue(), value.getStrCopyValue());
+		 assertArrayEquals(value.getStrArrayValue(), value.getStrArrayCopyValue());
 	}
 	
 	@Test  // related to standard test class

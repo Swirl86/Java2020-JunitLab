@@ -6,11 +6,11 @@ public class JunitLab {
 	private String[] strCopy = { "one", "two", "three" };
 	private String emptyStr = null;
 	
-	public String[] getStrValue() {
+	public String[] getStrArrayValue() {
 		return strValue;
 	}
 
-	public String[] getStrCopyValue() {
+	public String[] getStrArrayCopyValue() {
 		return strCopy;
 	}
 
