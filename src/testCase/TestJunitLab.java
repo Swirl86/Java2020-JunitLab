@@ -16,18 +16,18 @@ class TestJunitLab {
 	private static int nrOne;
 	private static int nrTwo;
 	
-	// Denotes that the annotated method should be executed before all @Test etc
-	// Annotations start with ‘@’.
+	// Denotes that the (annotated) method should be executed before all @Test etc
+	// Annotations start with â€˜@â€™.
 	@BeforeAll
-    static void initAll() {
+    	static void initAll() {
 		value = new JunitLab();
 		nrOne = 10;
 		nrTwo = 5;
 	}
 	 
 	@BeforeEach  // related to standard test class
-    void init() {
-    }
+    	void init() {
+    	}
 	
 	@Test  // Denotes that the annotated method is a test method.
 	void additionTest() { // succeedingTest()
@@ -109,25 +109,25 @@ class TestJunitLab {
 	}
 	
 	@Test  // related to standard test class
-    @Disabled("for demonstration purposes")
-    void skippedTest() {
+   	 @Disabled("for demonstration purposes")
+   	 void skippedTest() {
         // not executed
-    }
+   	 }
 
-    @Test  // related to standard test class
-    void abortedTest() {
+   	 @Test  // related to standard test class
+   	 void abortedTest() {
         assumeTrue("abc".contains("Z"));
         fail("test should have been aborted");
-    }
+   	}
     
-    @AfterEach  // related to standard test class
-    void tearDown() {
-    }
+    	@AfterEach  // related to standard test class
+    	void tearDown() {
+    	}
 
-    @AfterAll  // related to standard test class
-    static void tearDownAll() {
+    	@AfterAll  // related to standard test class
+   	static void tearDownAll() {
     	value = null;
-    }
+    	}
 
 
 }
